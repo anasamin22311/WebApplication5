@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Employee>
+@{ 
+    ViewBag.title = "Emloyee List";
+}        
+<div class="container">
+        <div class="card-deck">
+    <div class="row" >
+            @foreach (var employee in Model)
+
+            {
+            <div class="col-sm-4">
+                <div class="card m-3">
+                    <div class="card-header">
+                        <h3>@employee.Name</h3>
+                    </div>
+                    <img class=" img-fluid card-img-top" src="~/images/anas funky1.jpg" height="100" width="80"
+                         asp-append-version="true" />
+                    <div class="card-footer text-center">
+                        <a asp-controller="home" asp-action="details" asp-route-id="@employee.ID"
+                           class="btn btn-primary">View </a>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
