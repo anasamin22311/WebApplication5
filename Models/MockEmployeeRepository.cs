@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication5.Models;
 
 namespace WebApplication1.Models
 {
@@ -12,18 +13,22 @@ namespace WebApplication1.Models
         {
             _employeeList = new List<Employee>()
             {
-                new Employee(){ ID =1,Name="anas",Email="anasamin22311",Departmet="Bio"},
-                new Employee(){ ID =2,Name="Emo",Email="Emo1998",Departmet="teaching"},
-                new Employee(){ ID =3,Name="Ahmed",Email="Right1999",Departmet="Medecine"}
+                new Employee(){ ID =1,Name="anas",Email="anasamin22311",Departmet=Dept.HR},
+                new Employee(){ ID =2,Name="Emo",Email="Emo1998",Departmet=Dept.IT},
+                new Employee(){ ID =3,Name="Ahmed",Email="Right1999",Departmet=Dept.IT}
             };
 
         }
-
+        public Employee Add(Employee employee)
+        {
+            employee.ID =_employeeList.Max(e => e.ID)+1;
+            _employeeList.Add(employee);
+            return employee;
+        }
         public IEnumerable<Employee> GetAllEmployees()
         {
             return _employeeList;
         }
-
         public Employee getEmployee(int id)
         {
             return _employeeList.FirstOrDefault(e=>e.ID==id);

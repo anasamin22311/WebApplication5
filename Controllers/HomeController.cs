@@ -39,5 +39,20 @@ namespace WebApplication1.Controllers
             var vm  = _mapper.Map<HomeDetailsViewModel>(dto);
             return View(vm);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                Employee newEmployee = _employeeRepository.Add(employee);
+                return RedirectToAction("details", new { id = newEmployee.ID });
+            }
+            return View();
+        }
     }
 }
