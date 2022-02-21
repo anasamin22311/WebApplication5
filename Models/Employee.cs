@@ -11,9 +11,12 @@ namespace WebApplication1.Models
     {
         public int ID { get; set; }
         [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
         [Required]
+        [RegularExpression("@^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")]
         public string Email { get; set; }
+        [Required]
         public Dept Departmet { get; set; }
 
         //secret data

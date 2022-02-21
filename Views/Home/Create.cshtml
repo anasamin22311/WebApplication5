@@ -2,7 +2,7 @@
 @{ 
     ViewBag.Title = "Create Employee";
 }
-<form asp-action="create" asp-controller="Create" method="post" class="mt-3">
+<form asp-action="Create" asp-controller="Home" method="post" class="mt-3">
     <div class="form-group row">
         <label asp-for="Name" class="col-sm-2 col-form-label"> </label>
         <div class="col-sm-10">
@@ -20,7 +20,12 @@
         <div class="form-group row">
             <label asp-for="Departmet" class="col-sm-2 col-form-label"> </label>
             <div class="col-sm-10">
-                <select asp-for="Email" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<WebApplication5.Models.Dept>()"> </select>
+                <select asp-for="Departmet" class="custom-select mr-sm-2"
+                        asp-items="Html.GetEnumSelectList<WebApplication5.Models.Dept>()">
+                    <option value="">please select</option>
+                </select>
+                <span asp-validation-for="Departmet" class="text-danger"></span>
+
             </div>
             </div>
             <div>
