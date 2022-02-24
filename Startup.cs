@@ -16,6 +16,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Data;
 using WebApplication1.Models;
+using WebApplication5.Models;
 
 namespace WebApplication1
 {
@@ -44,7 +45,7 @@ namespace WebApplication1
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
             services.AddMvc(options => options.EnableEndpointRouting = false).AddXmlSerializerFormatters();
-            services.AddSingleton<IEmployeeRepository,MockEmployeeRepository>();
+            services.AddScoped<IEmployeeRepository,SQLEmployeeRepository>();
 
 
         }
