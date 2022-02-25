@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Dtos.Employee;
-using WebApplication1.Models;
-using WebApplication1.ViewModels;
+using WebApplication5.Dtos.Employee;
+using WebApplication5.Models;
+using WebApplication5.ViewModels;
 
-namespace WebApplication1.Config
+namespace WebApplication5.Config
 {
     public class EmployeeProfile :Profile
     {
