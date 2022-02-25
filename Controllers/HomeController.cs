@@ -10,7 +10,7 @@ using WebApplication5.ViewModels;
 
 namespace WebApplication5.Controllers
 {
-        [Route("[controller]/[action]")]
+    [Route("[controller]/[action]")]
     public class HomeController:Controller
     {
         private  readonly  IEmployeeRepository _employeeRepository;

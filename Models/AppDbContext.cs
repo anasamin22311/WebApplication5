@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication5.Models;
 
-namespace WebApplication5.Models
+namespace WebApplication1.Models
 {
     public class AppDbContext : IdentityDbContext
     {
