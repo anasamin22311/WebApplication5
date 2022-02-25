@@ -1,9 +1,14 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Dtos.Employee;
-using WebApplication1.Models;
-using WebApplication1.ViewModels;
-namespace WebApplication1.Controllers
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using WebApplication5.Dtos.Employee;
+using WebApplication5.Models;
+using WebApplication5.ViewModels;
+
+namespace WebApplication5.Controllers
 {
     [Route("[controller]/[action]")]
     public class HomeController:Controller
