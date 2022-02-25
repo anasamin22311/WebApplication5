@@ -1,17 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using WebApplication1.Dtos.Employee;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
-using WebApplication5.Models;
-
 namespace WebApplication1.Controllers
 {
-        [Route("[controller]/[action]")]
+    [Route("[controller]/[action]")]
     public class HomeController:Controller
     {
         private  readonly  IEmployeeRepository _employeeRepository;
